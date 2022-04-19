@@ -1,4 +1,5 @@
-import { constants, prototypes } from '/game';
+import { constants } from 'game';
+import { Creep, Flag } from 'game/prototypes';
 import { Task, TaskState } from "./Task.mjs";
 
 /** Flag占拠タスク Capture the Flag専用タスク */
@@ -15,7 +16,7 @@ export class CaptureFlag extends Task
      */
     constructor(flag)
     {
-        if(!(flag instanceof prototypes.Flag))
+        if(!(flag instanceof Flag))
         {
             throw new Error("引数エラー。Flagオブジェクトを渡してください。");
         }

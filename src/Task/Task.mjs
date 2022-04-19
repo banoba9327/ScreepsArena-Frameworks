@@ -1,3 +1,4 @@
+import { Creep } from 'game/prototypes';
 
 /**
  * タスク実行状況

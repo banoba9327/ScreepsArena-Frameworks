@@ -1,4 +1,5 @@
-import { prototypes, visual } from '/game';
+import { Creep } from 'game/prototypes';
+import { Visual } from 'game/visual';
 import { Task, TaskState } from "./Task/Task.mjs";
 import { VisualLayer } from "./VisualLayer.mjs";
 
@@ -12,18 +13,18 @@ export class TaskedCreep
     creep;
 
     /** 割り当てられているタスク
-     * @type {Array of Task}
+     * @type {Task[]}
      */
     tasks = new Array();
 
-    hitsVisual = new visual.Visual(VisualLayer.Hits, true);
+    hitsVisual = new Visual(VisualLayer.Hits, true);
 
     /** コンストラクタ
      * @param {Creep} creep 操作対象
      */
     constructor(creep)
     {
-        if(!(creep instanceof prototypes.Creep))
+        if(!(creep instanceof Creep))
         {
             throw new Error("引数エラー。Creepでないオブジェクトが渡されました。", creep)
         }

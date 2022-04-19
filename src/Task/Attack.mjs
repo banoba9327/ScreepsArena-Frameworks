@@ -1,4 +1,5 @@
-import { prototypes, constants } from '/game';
+import { constants } from 'game';
+import { Creep, Structure } from 'game/prototypes';
 import { Task, TaskState } from "./Task.mjs";
 
 /**
@@ -8,17 +9,17 @@ export class Attack extends Task
 {
     /**
      * 攻撃対象
-     * @type {Creep or Structure}
+     * @type {Creep}
      */
     target;
 
     /** コンストラクタ
-     * @param {Creep or Structure} target 攻撃対象
+     * @param {Creep} target 攻撃対象。Structureでも可能
      */
     constructor(target)
     {
-        if(!(target instanceof prototypes.Creep)
-            && !(target instanceof prototypes.Structure))
+        if(!(target instanceof Creep)
+            && !(target instanceof Structure))
         {
             throw new Error("引数エラー。CreepかStructureを渡してください。");
         }
@@ -49,7 +50,7 @@ export class Attack extends Task
 
     /**
      * タスク実行
-     * @param {Creep} creep
+     * @param {Creep} creep 操作対象
      */
     actionInternal(creep)
     {
