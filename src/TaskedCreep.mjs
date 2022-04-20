@@ -1,6 +1,7 @@
 import { Creep } from 'game/prototypes';
 import { Visual } from 'game/visual';
 import { Task, TaskState } from "./Task/Task.mjs";
+import { isAlive } from "./Utils/CreepUtility.mjs"
 import { VisualLayer } from "./VisualLayer.mjs";
 
 /** Creepのタスク実行クラス */
@@ -37,7 +38,7 @@ export class TaskedCreep
      */
     isAlive()
     {
-        return this.creep.exists && (this.creep.hits > 0);
+        return isAlive(this.creep);
     }
 
     /** タスクがあるかをbooleanで返す。
