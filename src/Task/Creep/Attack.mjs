@@ -1,6 +1,6 @@
 import { constants } from 'game';
 import { Creep, Structure } from 'game/prototypes';
-import { Task, TaskState } from "./Task.mjs";
+import { Task, TaskState } from "../Task.mjs";
 
 /**
  * 近接攻撃タスク

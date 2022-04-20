@@ -1,6 +1,6 @@
 import { utils, constants } from 'game';
 import { Creep, GameObject } from 'game/prototypes';
-import { Task, TaskState } from "./Task.mjs";
+import { Task, TaskState } from "../Task.mjs";
 
 /** 移動タスク */
 export class Move extends Task

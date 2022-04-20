@@ -1,6 +1,6 @@
 import { constants } from 'game';
 import { Creep, Flag } from 'game/prototypes';
-import { Task, TaskState } from "./Task.mjs";
+import { Task, TaskState } from "../Task.mjs";
 
 /** Flag占拠タスク Capture the Flag専用タスク */
 export class CaptureFlag extends Task
