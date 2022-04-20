@@ -1,4 +1,4 @@
-import { Creep } from 'game/prototypes';
+import { GameObject } from 'game/prototypes';
 
 /**
  * タスク実行状況
@@ -19,11 +19,11 @@ export const TaskState = Object.freeze({
 export class Task
 {
     /** タスク状況に合わせてTaskState列挙子を返す。
-     * @param {Creep} creep 操作対象
+     * @param {GameObject} object 操作対象
      * @returns タスク状況に応じたTaskState列挙子
      * @description 必ずオーバーライドすること。
     */
-    getTaskState(creep)
+    getTaskState(object)
     {
         // 何もすることがないので完了を返す
         return TaskState.Completed;
@@ -31,22 +31,22 @@ export class Task
 
     /**
      * タスク実行
-     * @param {Creep} creep
+     * @param {GameObject} object
      * @description 必ずオーバーライドすること。Task.action以外から呼び出さないでください。
      */
-    actionInternal(creep)
+    actionInternal(object)
     {
     }
 
     /**
      * タスク実行
-     * @param {Creep} creep
+     * @param {GameObject} object
      * @returns Taskの状況に応じたTaskState列挙子
      * @description 基本的にオーバーライド禁止
      */
-    action(creep)
+    action(object)
     {
-        this.actionInternal(creep);
+        this.actionInternal(object);
         return this.getTaskState();
     }
 }
