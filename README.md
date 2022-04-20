@@ -1,1 +1,4 @@
-# screeps-arena
+# Screeps: Arena用Framework
+テスト環境、実行環境にマージするための方策は検討中。
+タスク管理型のユニット制御機能を実装中。
+実行させたい行動のクラスを生成しCreepやStructureに与えることでそれらを制御する想定。
