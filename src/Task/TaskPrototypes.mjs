@@ -5,7 +5,7 @@ import { CaptureFlag } from "./Creep/CaptureFlag.mjs";
 import { Move } from "./Creep/Move.mjs";
 import { MeleeAttack } from "./Creep/Attack/MeleeAttack.mjs";
 
-export const prototypes = {
+export const taskPrototypes = {
     Task: Task,
     creep: {
         Move: Move,
