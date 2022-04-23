@@ -1,4 +1,3 @@
-import { GameObject } from 'game/prototypes';
 
 /**
  * タスク実行状況
@@ -13,13 +12,13 @@ export const TaskState = Object.freeze({
 });
 
 /**
- * Creepのタスク(命令)オブジェクト
+ * タスク(命令)オブジェクト
  * @description 派生クラスではコンストラクタの引数やパラメータ公開でタスク実行に必要な情報を操作させる。
  */
 export class Task
 {
     /** タスク状況に合わせてTaskState列挙子を返す。
-     * @param {GameObject} object 操作対象
+     * @param {Object} object タスク担当者
      * @returns タスク状況に応じたTaskState列挙子
      * @description 必ずオーバーライドすること。
     */
@@ -31,7 +30,7 @@ export class Task
 
     /**
      * タスク実行
-     * @param {GameObject} object
+     * @param {Object} object タスク担当者
      * @description 必ずオーバーライドすること。Task.action以外から呼び出さないでください。
      */
     actionInternal(object)
@@ -40,7 +39,7 @@ export class Task
 
     /**
      * タスク実行
-     * @param {GameObject} object
+     * @param {Object} object タスク担当者
      * @returns Taskの状況に応じたTaskState列挙子
      * @description 基本的にオーバーライド禁止
      */
