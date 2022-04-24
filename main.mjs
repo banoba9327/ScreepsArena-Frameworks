@@ -2,7 +2,7 @@ import { utils } from 'game';
 import { Creep } from 'game/prototypes';
 import { Flag } from 'arena/prototypes';
 import { TaskedCreep } from "./src/Task/Objects/TaskedCreep.mjs";
-import { prototypes } from "./src/Task/TaskPrototypes.mjs"
+import { taskTypes } from "./src/Task/TaskTypes.mjs"
 
 /**
  * 初期化フラグ
