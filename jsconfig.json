@@ -1,5 +1,5 @@
 {
-    "typeAcquisition": {
-        "include": ["screeps-arena"]
-    }
+	"typeAcquisition": {
+		"include": ["screeps-arena"]
+	}
 }

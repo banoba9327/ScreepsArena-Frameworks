@@ -8,12 +8,12 @@ import { Creep } from 'game/prototypes';
  */
  export function calculateCost(bodyParts)
  {
-     var sum = 0;
-     for(var parts of bodyParts)
-     {
-         sum += constants.BODYPART_COST[parts];
-     }
-     return sum;
+	 var sum = 0;
+	 for(var parts of bodyParts)
+	 {
+		 sum += constants.BODYPART_COST[parts];
+	 }
+	 return sum;
  }
 
 /**
@@ -23,7 +23,7 @@ import { Creep } from 'game/prototypes';
  */
 export function isAlive(creep)
 {
-    return creep.exists && (creep.hits > 0)
+	return creep.exists && (creep.hits > 0)
 }
 
 /**
@@ -34,5 +34,5 @@ export function isAlive(creep)
  */
 export function hasBodyParts(creep, bodyParts)
 {
-    return creep.body.indexOf(bodyParts) >= 0;
+	return creep.body.indexOf(bodyParts) >= 0;
 }
