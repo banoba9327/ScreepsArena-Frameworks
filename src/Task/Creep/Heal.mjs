@@ -24,8 +24,8 @@ export class Heal extends TargetingTask
 	 */
 	getTaskState(creep)
 	{
-		// targetが消滅していたら完了
-		if(!isAlive(this.target))
+		// targetが消滅するか回復の必要がなければ完了
+		if(!isAlive(this.target) || (this.target.hits >= this.target.hitsMax))
 		{
 			return TaskState.Completed;
 		}
