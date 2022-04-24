@@ -1,8 +1,8 @@
 import { utils } from 'game';
 import { Creep } from 'game/prototypes';
 import { Flag } from 'arena/prototypes';
-import { TaskedCreep } from "./src/TaskedCreep.mjs";
-import { taskPrototypes } from "./src/Task/TaskPrototypes.mjs"
+import { TaskedCreep } from "./src/Task/Objects/TaskedCreep.mjs";
+import { prototypes } from "./src/Task/TaskPrototypes.mjs"
 
 /**
  * 初期化フラグ
@@ -58,7 +58,7 @@ function initialize()
     for(let creep of myCreeps)
     {
         let taskedCreep = new TaskedCreep(creep);
-        taskedCreep.addTask(new taskPrototypes.creep.CaptureFlag(enemyFlags[0]));
+        taskedCreep.pushTask(new prototypes.creep.CaptureFlag(enemyFlags[0]));
         taskedCreeps.push(taskedCreep);
     }
 
