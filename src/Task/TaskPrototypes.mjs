@@ -8,7 +8,7 @@ import { MeleeAttack } from "./Creep/Attack/MeleeAttack.mjs";
 export const taskPrototypes = {
     Task: Task,
     creep: {
-        Move: Move,
+        TargetingMove: TargetingMove,
         MeleeAttack: MeleeAttack,
         CaptureFlag: CaptureFlag,
     }

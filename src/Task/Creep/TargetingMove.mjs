@@ -3,7 +3,7 @@ import { Creep, GameObject } from 'game/prototypes';
 import { Task, TaskState } from "../Task.mjs";
 
 /** 移動タスク */
-export class Move extends Task
+export class TargetingMove extends Task
 {
     /**
      * 移動目標
